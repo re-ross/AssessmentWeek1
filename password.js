@@ -6,13 +6,11 @@ const reader = readline.createInterface({
 });
 
 reader.question("Please enter password", function (input) {
-  tokens = String(input);
+  password = String(input);
 
-  userPass = tokens;
-
-  if (userPass.length < 10) {
+  if (password.length < 10) {
     console.log("Not enough characters");
-  } else if (userPass.length > 9) {
+  } else if (password.length > 9) {
     console.log("Success!");
   } else console.log("Failure!");
 });
