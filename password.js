@@ -9,8 +9,26 @@ reader.question("Please enter password", function (input) {
   password = String(input);
 
   if (password.length < 10) {
-    console.log("Not enough characters");
+    console.log(`Failure:
+    
+ ________________________________________
+< Not enough characters >
+ ----------------------------------------
+        \\   ^__^
+         \\  (oo)\\_______
+            (__)\\       )\\/\\
+                ||----w |
+                ||     ||`);
   } else if (password.length > 9) {
-    console.log("Success!");
+    console.log(`Success:
+    
+console.log(________________________________________
+< Password saved! >
+ ----------------------------------------
+        \\   ^__^
+         \\  (oo)\\_______
+            (__)\\       )\\/\\
+                ||----w |
+                ||     ||`);
   } else console.log("Failure!");
 });
