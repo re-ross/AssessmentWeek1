@@ -5,10 +5,11 @@ const reader = readline.createInterface({
   output: process.stdout,
 });
 
-reader.question("Please enter password", function (input) {
+reader.question("Hello, please enter a password", function (input) {
   password = String(input);
-
-  if (password.length < 10) {
+  if ((password = "password")) {
+    console.log("Be a little more creative, please.");
+  } else if (password.length < 10) {
     console.log(`Failure:
     
  ________________________________________
@@ -22,7 +23,7 @@ reader.question("Please enter password", function (input) {
   } else if (password.length > 9) {
     console.log(`Success:
     
-console.log(________________________________________
+________________________________________
 < Password saved! >
  ----------------------------------------
         \\   ^__^
